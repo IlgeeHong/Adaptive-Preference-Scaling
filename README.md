@@ -46,7 +46,16 @@ Provide instructions on how to run the robotic control tasks. For example:
 - Training an Agent
 
 ```
-bash run_rlhf.sh
+bash run_rlhf.sh \
+  --env_id AntBulletEnv-v0 \
+  --enable_individualized_tau True \
+  --n_rm_epochs 5 \
+  --rm_lr 1e-4 \
+  --rm_batch_size 64 \
+  --n_tau_iters 3 \
+  --tau_min 0.1 \
+  --tau_max 1.0 \
+  --rho 0.1
 ```
 
 - Evaluating an Agent
@@ -73,13 +82,13 @@ Follow the steps below to set up the environment and install the necessary depen
 - Install the package dependencies:
 
 ```
-git clone https://github.com/IlgeeHong/Adaptive-Preference-Scaling.git
-cd ./Adaptive-Preference-Scaling/natural_language_generation/
+
 ```
 
 ### 2-2. Usage
 
 ```
+
 ```
 
 
