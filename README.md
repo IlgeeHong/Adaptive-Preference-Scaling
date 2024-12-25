@@ -1,6 +1,6 @@
 # Adaptive Preference Scaling for RLHF
 
-This repository contains the code for our paper [**Adaptive Preference Scaling for Reinforcement Learning with Human Feedback**](https://arxiv.org/abs/2406.02764). We introduce an **adaptive preference loss** for reward modeling within the context of Reinforcement Learning with Human Feedback (RLHF). This approach improves the flexibility of the reward learning process by incorporating an adaptive scaling parameter for each sample in the preference dataset.
+This repository contains the code for our paper [Adaptive Preference Scaling for Reinforcement Learning with Human Feedback](https://arxiv.org/abs/2406.02764). We introduce an **adaptive preference loss** for reward modeling within the context of Reinforcement Learning with Human Feedback (RLHF). This approach improves the flexibility of the reward learning process by incorporating an adaptive scaling parameter for each sample in the preference dataset.
 
 ## Table of Contents
 
@@ -11,9 +11,9 @@ This repository contains the code for our paper [**Adaptive Preference Scaling f
 
 Our implementation of robotic control tasks is based on the following frameworks:
 
-- [**Stable-Baselines3**](https://github.com/DLR-RM/stable-baselines3)
+- [Stable-Baselines3](https://github.com/DLR-RM/stable-baselines3)
 
-- [**RL Zoo Training Framework**](https://github.com/DLR-RM/rl-baselines3-zoo)
+- [RL Zoo Training Framework](https://github.com/DLR-RM/rl-baselines3-zoo)
   
 ### 1-1. Setup
 
