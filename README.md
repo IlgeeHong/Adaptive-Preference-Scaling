@@ -10,6 +10,7 @@ This repository contains the code for our paper [Adaptive Preference Scaling for
 2. [Natural Language Generation](#2-natural-language-generation)
    - [2.1 Setup](#21-setup)
    - [2.2 Usage](#22-usage)
+3. [Citation](#3-citation)
 
 ## 1. Robotic Control
 
@@ -51,3 +52,12 @@ bash run_rlhf.sh
 - Evaluating an Agent
 
 ## 2. Natural Language Generation
+
+## 3. Citation
+
+@InProceedings{hong2024adaptive,
+title={Adaptive Preference Scaling for Reinforcement Learning with Human Feedback},
+author={Ilgee Hong and Zichong Li and Alexander Bukharin and Yixiao Li and Haoming Jiang and Tianbao Yang and Tuo Zhao},
+booktitle={The Thirty-eighth Annual Conference on Neural Information Processing Systems},
+year={2024},
+}
