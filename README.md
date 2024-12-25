@@ -5,7 +5,11 @@ This repository contains the code for our paper [Adaptive Preference Scaling for
 ## Table of Contents
 
 1. [Robotic Control](#1-robotic-control)
+   - [1.1 Setup](#11-setup)
+   - [1.2 Usage](#12-usage)
 2. [Natural Language Generation](#2-natural-language-generation)
+   - [2.1 Setup](#21-setup)
+   - [2.2 Usage](#22-usage)
 
 ## 1. Robotic Control
 
@@ -33,5 +37,17 @@ git clone https://github.com/IlgeeHong/Adaptive-Preference-Scaling.git
 cd ./Adaptive-Preference-Scaling/robotic_control/
 pip install -r requirements.txt
 ```
+
+### 1-2. Usage
+
+Provide instructions on how to run the robotic control tasks. For example:
+
+- Training an Agent
+
+```
+bash run_rlhf.sh
+```
+
+- Evaluating an Agent
 
 ## 2. Natural Language Generation
