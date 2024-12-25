@@ -55,9 +55,11 @@ bash run_rlhf.sh
 
 ## 3. Citation
 
+```
 @InProceedings{hong2024adaptive,
 title={Adaptive Preference Scaling for Reinforcement Learning with Human Feedback},
 author={Ilgee Hong and Zichong Li and Alexander Bukharin and Yixiao Li and Haoming Jiang and Tianbao Yang and Tuo Zhao},
 booktitle={The Thirty-eighth Annual Conference on Neural Information Processing Systems},
 year={2024},
 }
+```
