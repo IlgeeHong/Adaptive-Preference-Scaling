@@ -43,7 +43,7 @@ pip install -r requirements.txt
 
 Provide instructions on how to run the robotic control tasks. For example:
 
-- Training an Agent
+- Training an agent
 
 ```
 bash run_rlhf.sh \
@@ -58,7 +58,7 @@ bash run_rlhf.sh \
   --rho 0.1
 ```
 
-- Evaluating an Agent
+- Evaluating an agent
 
 ## 2. Natural Language Generation
 
