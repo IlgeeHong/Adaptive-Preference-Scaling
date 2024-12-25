@@ -53,6 +53,29 @@ bash run_rlhf.sh
 
 ## 2. Natural Language Generation
 
+### 2-1. Setup
+
+Follow the steps below to set up the environment and install the necessary dependencies for running the natural language generation code.
+
+- Create a Python virtual environment using Conda:
+
+```
+
+```
+
+- Install the package dependencies:
+
+```
+git clone https://github.com/IlgeeHong/Adaptive-Preference-Scaling.git
+cd ./Adaptive-Preference-Scaling/natural_language_generation/
+```
+
+### 2-2. Usage
+
+```
+```
+
+
 ## 3. Citation
 
 ```
