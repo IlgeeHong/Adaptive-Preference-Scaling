@@ -9,17 +9,13 @@ This repository contains the code for our paper [**Adaptive Preference Scaling f
 
 ## 1. Robotic Control
 
-Our implementation of robotic control tasks leverages the following frameworks:
+Our implementation of robotic control tasks is based on the following frameworks:
 
-- **Stable-Baselines3**: A set of reliable implementations of reinforcement learning algorithms.
-  - *Reference*: Raffin et al., 2021
-  - [GitHub Repository](https://github.com/DLR-RM/stable-baselines3)
+- [**Stable-Baselines3**](https://github.com/DLR-RM/stable-baselines3)
 
-- **RL Zoo Training Framework**: A comprehensive training framework for reinforcement learning.
-  - *Reference*: Raffin, 2020
-  - [GitHub Repository](https://github.com/DLR-RM/rl-baselines3-zoo)
+- [**RL Zoo Training Framework**](https://github.com/DLR-RM/rl-baselines3-zoo)
   
-## Setup
+### 1-1. Setup
 
 Follow the steps below to set up the environment and install the necessary dependencies for running the robotic control code.
 
@@ -33,7 +29,9 @@ conda activate robotic_control
 Install the package dependencies:
 
 ```
-git clone https://github.com/huggingface/alignment-handbook.git](https://github.com/IlgeeHong/Adaptive-Preference-Scaling.git
+git clone https://github.com/IlgeeHong/Adaptive-Preference-Scaling.git
 cd ./Adaptive-Preference-Scaling/robotic_control/
 pip install -r requirements.txt
 ```
+
+## 2. Natural Language Generation
