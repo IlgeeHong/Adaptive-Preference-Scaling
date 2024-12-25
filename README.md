@@ -14,7 +14,7 @@ This repository contains the code for our paper [Adaptive Preference Scaling for
 
 ## 1. Robotic Control
 
-Our implementation of robotic control tasks is based on the following frameworks:
+Our implementations of robotic control tasks are based on the following frameworks:
 
 - [Stable-Baselines3](https://github.com/DLR-RM/stable-baselines3)
 
@@ -52,6 +52,13 @@ bash run_rlhf.sh
 - Evaluating an Agent
 
 ## 2. Natural Language Generation
+
+Our implementations of natural language generation tasks are based on the following frameworks:
+
+- [Transformers](https://github.com/huggingface/transformers)
+
+- [TRL Training Framework](https://github.com/huggingface/trl)
+
 
 ### 2-1. Setup
 
