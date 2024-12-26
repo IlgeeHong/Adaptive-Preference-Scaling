@@ -46,7 +46,7 @@ Provide instructions on how to run the robotic control tasks. For example:
 - Training an agent
 
 ```
-python train_rlhf.sh \
+python train_rlhf.py \
   --env_id AntBulletEnv-v0 \
   --enable_individualized_tau True \
   --n_rm_epochs 5 \
