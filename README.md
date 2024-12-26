@@ -20,7 +20,7 @@ Our implementations of robotic control tasks are based on the following framewor
 
 - [RL Zoo Training Framework](https://github.com/DLR-RM/rl-baselines3-zoo)
   
-### 1-1. Setup
+### 1.1. Setup
 
 Follow the steps below to set up the environment and install the necessary dependencies for running the robotic control code.
 
@@ -39,7 +39,7 @@ cd ./Adaptive-Preference-Scaling/robotic_control/
 pip install -r requirements.txt
 ```
 
-### 1-2. Usage
+### 1.2. Usage
 
 Provide instructions on how to run the robotic control tasks. For example:
 
@@ -86,7 +86,7 @@ Our implementations of natural language generation tasks are based on the follow
 - [TRL Training Framework](https://github.com/huggingface/trl)
 
 
-### 2-1. Setup
+### 2.1. Setup
 
 Follow the steps below to set up the environment and install the necessary dependencies for running the natural language generation code.
 
@@ -102,7 +102,7 @@ Follow the steps below to set up the environment and install the necessary depen
 
 ```
 
-### 2-2. Usage
+### 2.2. Usage
 
 ```
 
