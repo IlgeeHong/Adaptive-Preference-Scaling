@@ -49,7 +49,7 @@ Provide instructions on how to run the robotic control tasks. For example:
 python train_rlhf.py \
   --output_path /path/to/train/result/directory \
   --env_id AntBulletEnv-v0 \
-  --enable_individualized_tau True \
+  --enable_individualized_tau \
   --n_rm_epochs 5 \
   --rm_lr 1e-4 \
   --rm_batch_size 64 \
@@ -66,7 +66,7 @@ python eval_agent.py \
   --input_path /path/to/train/result/directory \
   --output_path /path/to/eval/result/directory \
   --env_id AntBulletEnv-v0 \
-  --enable_individualized_tau True \
+  --enable_individualized_tau \
   --n_rm_epochs 5 \
   --rm_lr 1e-4 \
   --rm_batch_size 64 \
