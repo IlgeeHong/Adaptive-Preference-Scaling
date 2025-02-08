@@ -85,27 +85,25 @@ Our implementations of natural language generation tasks are based on the follow
 
 - [TRL Training Framework](https://github.com/huggingface/trl)
 
-
-### 2.1. Setup
-
-Follow the steps below to set up the environment and install the necessary dependencies for running the natural language generation code.
-
-- Create a Python virtual environment using Conda:
+### 2.1. Usage
 
 ```
-
-```
-
-- Install the package dependencies:
-
-```
-
-```
-
-### 2.2. Usage
-
-```
-
+torchrun --nproc_per_node=8 --master_port=60000 dpo.py \
+    --max_prompt_length 512 \
+    --model_name_or_path /path/to/sft/model \
+    --train_path /path/to/train/formatted_dataset/json \
+    --val_path /path/to/val/formatted_dataset/json \
+    --output_path /path/to/train/result/directory \
+    --per_device_train_batch_size 1 \
+    --gradient_accumulation_steps 4 \
+    --learning_rate 5e-5 \
+    --beta 0.1 \
+    --rho 0.1 \
+    --tau_max 5 \
+    --tau_min 0.1 \
+    --eval_steps 1000 \
+    --num_train_epochs 1 \
+    --loss_type aps
 ```
 
 

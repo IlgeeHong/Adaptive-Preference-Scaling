@@ -136,7 +136,7 @@ class DPOTrainer(Trainer):
         ref_model: Optional[Union[PreTrainedModel, nn.Module, str]] = None,
         beta: float = 0.1,
         label_smoothing: float = 0,
-        loss_type: Literal["sigmoid", "hinge", "ipo", "kto", "adaptive_temp", "quadratic"] = "sigmoid",
+        loss_type: Literal["sigmoid", "hinge", "ipo", "kto", "aps", "quadratic"] = "sigmoid",
         args: TrainingArguments = None,
         data_collator: Optional[DataCollator] = None,
         label_pad_token_id: int = -100,
@@ -869,7 +869,7 @@ class DPOTrainer(Trainer):
             )
 
         ################################################################################################
-        elif self.loss_type == "adaptive_temp":
+        elif self.loss_type == "aps":
             logits_detach = (self.beta * logits).clone().detach()
             tau = torch.ones_like(logits_detach)*self.tau_init
             # Newton method: adding 1e-6 to the inputs of log() for resolving numerical issues
@@ -878,7 +878,7 @@ class DPOTrainer(Trainer):
                 hess_tau = ((logits_detach**2/tau**3)*(1-torch.sigmoid(logits_detach/tau))*torch.sigmoid(logits_detach/tau)).clamp_(min=1e-6)
                 newton_dir = -grad_tau/hess_tau
                 tau = (tau + newton_dir).clamp_(min=self.tau_min, max=self.tau_max)
-            losses = (-tau*torch.log(torch.sigmoid(self.beta * logits/tau)+1e-6)).mean()
+            losses = -tau*torch.log(torch.sigmoid(self.beta * logits/tau)+1e-6)
             if self.save_results:
                 result = {'logits': logits_detach.cpu(), 'tau': tau.cpu(), 'loss': losses.detach().cpu(), 'pi_chosen':policy_chosen_logps.detach().cpu(),
                             'pi_rejected': policy_rejected_logps.detach().cpu(), 'ref_chosen':reference_chosen_logps, 'ref_rejected':reference_rejected_logps}
@@ -893,7 +893,7 @@ class DPOTrainer(Trainer):
                 hess_tau = ((logits_detach**2/tau**3)*(1-torch.sigmoid(logits_detach/tau))*torch.sigmoid(logits_detach/tau) + 2 * self.rho).clamp_(min=1e-6)
                 newton_dir = -grad_tau/hess_tau
                 tau = (tau + newton_dir).clamp_(min=self.tau_min, max=self.tau_max)
-            losses = (-tau*torch.log(torch.sigmoid(self.beta * logits/tau)+1e-6)).mean()
+            losses = -tau*torch.log(torch.sigmoid(self.beta * logits/tau)+1e-6)
             if self.save_results:
                 result = {'logits': logits_detach.cpu(), 'tau': tau.cpu(), 'loss': losses.detach().cpu(), 'pi_chosen':policy_chosen_logps.detach().cpu(),
                             'pi_rejected': policy_rejected_logps.detach().cpu(), 'ref_chosen':reference_chosen_logps, 'ref_rejected':reference_rejected_logps}

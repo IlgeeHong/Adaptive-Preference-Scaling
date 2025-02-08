@@ -41,7 +41,7 @@ class ScriptArguments:
     # data parameters
     beta: Optional[float] = field(default=0.01, metadata={"help": "the beta parameter for DPO loss"})
     
-    # adaptive temp parameters
+    # aps parameters
     loss_type: Optional[str] = field(default="sigmoid", metadata={"help": ""})
     rho: Optional[float] = field(default=0.1, metadata={"help": ""})
     tau_max: Optional[float] = field(default=5.0, metadata={"help": ""})
@@ -238,8 +238,8 @@ if __name__ == "__main__":
     else:
         peft_config = None
 
-    if script_args.loss_type == "adaptive_temp":
-        print("Using adaptive temperature !!!!!")
+    if script_args.loss_type == "aps":
+        print("Using aps !!!!!")
     # 5. initialize the DPO trainer
     dpo_trainer = DPOTrainer(
         model,
